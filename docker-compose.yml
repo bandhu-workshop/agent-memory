@@ -1,0 +1,30 @@
+version: '3.8'
+services:
+#   memgraph:
+#     image: memgraph/memgraph-mage:latest
+#     container_name: memgraph
+#     ports:
+#       - "7687:7687"
+#     command: ["--schema-info-enabled=True"]
+
+  qdrant:
+    image: qdrant/qdrant:latest
+    container_name: qdrant
+    ports:
+      - "6333:6333"
+    volumes:
+      - ./localdev/volumes/qdrant_data:/qdrant/storage
+
+  ollama:
+    image: ollama/ollama:latest
+    container_name: ollama
+    ports:
+      - "11434:11434"
+    volumes:
+      - ./localdev/volumes/ollama_data:/root/.ollama
+    # environment:
+      # You can add model preload or other env vars here if needed
+      # OLLAMA_MODELS: "llama3.1:latest,nomic-embed-text:latest"
+
+# volumes:
+  # Named volumes are not needed since we use bind mounts
