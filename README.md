@@ -38,14 +38,15 @@ This launches Qdrant (vector DB) and Ollama (embeddings/LLM) locally.
 
 ### 4. Run Example Scripts
 
+
 #### mem0 Example
 ```bash
-python scripts/local_memory.py
+python scripts/local_mem0_memory.py
 ```
 
 #### Google ADK Memory Example
 ```bash
-python scripts/adk_memory.py
+python scripts/adk_mem0_memory.py
 ```
 
 ---
@@ -53,8 +54,8 @@ python scripts/adk_memory.py
 ## Project Structure
 
 - `src/agent_memory/` – Main app code and config
-- `scripts/local_memory.py` – mem0 local memory demo
-- `scripts/adk_memory.py` – Google ADK memory agent demo
+- `scripts/local_mem0_memory.py` – mem0 local memory demo
+- `scripts/adk_mem0_memory.py` – Google ADK memory agent demo
 - `docker-compose.yml` – Qdrant and Ollama services
 - `localdev/volumes/` – Data volumes for Qdrant/Ollama
 
